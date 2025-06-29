@@ -1,12 +1,47 @@
-# React + Vite
+# CryptoTracker - Cryptocurrency Tracking App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive, single-page cryptocurrency tracker and converter built with **React**, **Tailwind CSS**, **Framer Motion**, and **CoinGecko API**.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Live crypto market data (top 20 coins)
+- Current price, 24h % change, 7d % change, and coin logo
+- Real-time crypto-to-crypto converter
+- Mobile-first UI using Tailwind CSS
+- Smooth animations via Framer Motion
+- Routing via React Router DOM
 
-## Expanding the ESLint configuration
+## Architecture Choice & Reasoning
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### ➤ SPA (Single Page Application)
+
+- Fast navigation and no reloads
+- Ideal for interactive and real-time UI
+
+### ➤ React + Vite
+
+- Vite provides blazing-fast dev experience
+- React allows modular, reusable components
+
+### ➤ Tailwind CSS
+
+- Utility-first styling for responsive, consistent design
+- Easy dark/light theming, animation, layout control
+
+### ➤ Framer Motion
+
+- Professional-grade animations with minimal effort
+- Smooth transitions, hover effects, and animated result boxes
+
+### ➤ CoinGecko API
+
+- Free and reliable crypto market data
+- No authentication key required
+
+---
+
+## Screenshots
+
+| Homepage                        | Converter                               |
+| ------------------------------- | --------------------------------------- |
+| ![home](./src/img/HomePage.png) | ![convert](./src/img/ConverterPage.png) |
