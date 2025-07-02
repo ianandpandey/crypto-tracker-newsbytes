@@ -43,6 +43,10 @@
   cursor: pointer;
 }
 
+.close-btn:hover {
+  color: red;
+}
+
 .support-modal label {
   display: block;
   margin-bottom: 14px;
@@ -69,6 +73,11 @@
   margin-top: 12px;
   cursor: pointer;
 }
+
+.submit-btn:hover {
+  color: #1D4ED8;
+}
+
 .error {
   color: red;
   font-size: 0.75rem;
