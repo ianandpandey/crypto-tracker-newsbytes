@@ -73,3 +73,32 @@
   color: red;
   font-size: 0.75rem;
 }
+
+.support-btn.disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+.thank-you {
+  text-align: center;
+}
+.checkmark {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  color: green;
+  margin-bottom: 10px;
+  animation: pop 0.3s ease-in-out;
+  /* transition: cubic-bezier(0.075, 0.82, 0.165, 1); */
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
