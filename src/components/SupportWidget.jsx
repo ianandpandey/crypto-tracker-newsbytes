@@ -5,6 +5,27 @@ import { CiMail } from "react-icons/ci";
 const SupportWidget = () => {
   const [open, setOpen] = useState(false);
   const [disabled, setDisabled] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    setErrors((prev) => ({ ...prev, [name]: "" }));
+  };
+
+  const validate = () => {
+    const err = {};
+    if (!formData.name.trim()) err.name = "Name is required";
+    if (!formData.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/))
+      err.email = "Valid email is required";
+    if (!formData.message.trim()) err.message = "Message is required";
+    return err;
+  };
 
   return (
     <>
@@ -23,7 +44,43 @@ const SupportWidget = () => {
             <button className="close-btn" onClick={() => setOpen(false)}>
               ×
             </button>
-            {/* Form will be added later */}
+            <form>
+              <label>
+                Name*
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                />
+                {errors.name && <span className="error">{errors.name}</span>}
+              </label>
+              <label>
+                Email*
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+                {errors.email && <span className="error">{errors.email}</span>}
+              </label>
+              <label>
+                Message*
+                <textarea
+                  name="message"
+                  rows="4"
+                  value={formData.message}
+                  onChange={handleChange}
+                ></textarea>
+                {errors.message && (
+                  <span className="error">{errors.message}</span>
+                )}
+              </label>
+              <button type="submit" className="submit-btn">
+                Send
+              </button>
+            </form>
           </div>
         </div>
       )}

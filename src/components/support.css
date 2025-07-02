@@ -42,3 +42,34 @@
   /* color: #000; */
   cursor: pointer;
 }
+
+.support-modal label {
+  display: block;
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+.support-modal input,
+.support-modal textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.submit-btn {
+  background-color: #eff6ff;
+  color: #000;
+  font-weight: 600;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 12px;
+  cursor: pointer;
+}
+.error {
+  color: red;
+  font-size: 0.75rem;
+}
