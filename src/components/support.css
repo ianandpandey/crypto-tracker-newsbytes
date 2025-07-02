@@ -1,0 +1,44 @@
+.support-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 9px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 999;
+  font-size: 26px;
+}
+
+.support-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.support-modal {
+  background: white;
+  padding: 24px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  /* color: #000; */
+  cursor: pointer;
+}
